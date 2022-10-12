@@ -1,0 +1,139 @@
+.main-part-wrapper {
+    max-width: 1280px;
+}
+
+.showcase-area {
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px 40px;
+    grid-template-areas:
+    "left-side left-side right-side right-side"
+    "left-side left-side right-side right-side"
+    "bottom bottom bottom bottom";
+    margin-top: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.text {
+    color: var(--text-color);
+    line-height: 30px;
+    width: 300px;
+}
+
+.title {
+    font-family: "math";
+!important;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 650px) {
+
+    .title{
+        font-size: 10px;
+    }
+
+    .text p{
+        font-size: 5px;
+    }
+
+    .main-part-wrapper .showcase-area {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30%;
+    }
+
+    .showcase-area img {
+        width: 100%;
+        transition: none;
+        margin-left: 20%;
+    }
+
+    .start-btn{
+        padding: 20px;
+
+    }
+}
+
+.start-btn input {
+    border: none;
+    margin-top: 30px;
+    background-color: var(--navbar-color);
+    color: #dad7d7;
+    padding: 10px 14px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.start-btn input:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    color: white;
+    box-shadow: 0 0 40px 2px;
+}
+
+.person {
+    width: 110%;
+}
+
+.left-side {
+    grid-area: left-side;
+    margin-left: 100px;
+}
+
+.right-side {
+    grid-area: right-side;
+}
+
+.right-side img {
+    grid-area: right-side;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+
+.toggle-theme-btn {
+    display: inline-block;
+    border: none;
+    background-color: black;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.toggle-theme-btn i {
+    line-height: 35px;
+    margin-left: 6px;
+}
+
+.toggle-theme-btn i:last-child {
+    display: none;
+}
+
+.toggle-theme-btn:hover {
+    background-color: red;
+    transition: 300ms;
+    animation: spin 1000ms linear infinite;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

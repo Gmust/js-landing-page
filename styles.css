@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import "styles/header.css";
+@import "styles/showcase.css";
+
+.light {
+    --mainColor: rgba(150, 29, 13, 0.98);
+    --hoverColor: rgb(133, 28, 14);
+    --navbar-color: #000
+}
+
+.black {
+    --mainColor: rgba(66, 13, 6, 0.98);
+    --hoverColor: rgb(133, 28, 14);
+    --navbar-color: #000;
+    --text-color: #a6a1a1;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #cecdcd;
+}
+
+.app-wrapper {
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0 10px;
+    overflow: hidden;
+    background-color: var(--mainColor);
+    background-image: url("/images/Untitled.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50px 160px;
+}
+
+
+.shape1 {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 0;
+    width: 500px;
+    right: 10px;
+}
+
+.shape2 {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 0;
+    bottom: 1px;
+    width: 500px;
+    right: 280px;
+}
+
+.copy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: changeTheme 500ms;
+}
+
+.noScroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+@keyframes changeTheme {
+    0% {
+        clip-path: circle(30% at -30% 30%);
+    }
+    100% {
+        clip-path: circle(150% at 0 0);
+    }
+}
+
+
