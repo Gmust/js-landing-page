@@ -44,7 +44,6 @@ a {
     width: 100%;
     min-height: 100vh;
     padding: 30px 0 10px;
-    overflow: hidden;
     background-color: var(--mainColor);
     background-image: url("/images/Untitled.png");
     height: 100vh;
